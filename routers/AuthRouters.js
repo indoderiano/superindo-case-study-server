@@ -14,6 +14,7 @@ const router=express.Router()
 // router.get('/keeplogin',Auth,AuthControllers.keeplogin)
 // router.put('/password/:id',AuthControllers.changepassword)
 
+router.post('/login', AuthControllers.login)
 router.get('/users', AuthControllers.test)
 router.get('/create-table-user', AuthControllers.createTableUser)
 

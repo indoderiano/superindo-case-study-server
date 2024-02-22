@@ -1,13 +1,16 @@
 const express = require('express')
-// const bodyParser = require('body-parser')
-// const cors = require('cors')
-// const bearertoken = require('express-bearer-token')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const bearertoken = require('express-bearer-token')
 
 const app = express()
-const port = 3000
+const port = 4000
 
 
-
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(cors())
+app.use(bearertoken())
 
 
 app.get('/', (req, res) => {
