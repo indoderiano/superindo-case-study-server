@@ -17,9 +17,12 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-const { AuthRouters } = require('./routers')
+const { AuthRouters, MigrateRouters, ProductCategoryRouters } = require('./routers')
 
 app.use('/users', AuthRouters)
+app.use('/migrate', MigrateRouters)
+app.use('/product-category', ProductCategoryRouters)
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

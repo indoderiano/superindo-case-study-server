@@ -16,6 +16,5 @@ const router=express.Router()
 
 router.post('/login', AuthControllers.login)
 router.get('/users', AuthControllers.test)
-router.get('/create-table-user', AuthControllers.createTableUser)
 
 module.exports=router
