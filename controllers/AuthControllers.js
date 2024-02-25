@@ -73,7 +73,7 @@ module.exports={
 
             let private_key = "superindo";
 
-            let access_token = jwt.sign({ role: role }, private_key, {expiresIn: '24h'});
+            let access_token = jwt.sign({ username, role }, private_key, {expiresIn: '24h'});
 
             let user_data = {
               username,

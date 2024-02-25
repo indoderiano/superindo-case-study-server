@@ -174,7 +174,7 @@ module.exports={
     },
     createTableTransaction: (req, res) => {
 
-      let query_create_table_transactions = "CREATE TABLE `superindo_case_study`.`transactions` (`id` int AUTO_INCREMENT, `transaction_no` int, `total_amount` int, `active` boolean,`created_user` char(128) NOT NULL,`created_date` timestamp NOT NULL DEFAULT NOW(),`updated_user` char(128) NOT NULL,`updated_date` timestamp NOT NULL DEFAULT NOW(), PRIMARY KEY (id));";
+      let query_create_table_transactions = "CREATE TABLE `superindo_case_study`.`transactions` (`id` int AUTO_INCREMENT, `transaction_no` char(128), `total_amount` int, `active` boolean,`created_user` char(128) NOT NULL,`created_date` timestamp NOT NULL DEFAULT NOW(),`updated_user` char(128) NOT NULL,`updated_date` timestamp NOT NULL DEFAULT NOW(), PRIMARY KEY (id));";
 
 
       db.execute(query_create_table_transactions, (error, rows) => {
