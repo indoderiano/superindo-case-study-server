@@ -17,11 +17,21 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-const { AuthRouters, MigrateRouters, ProductCategoryRouters } = require('./routers')
+const {
+  AuthRouters,
+  MigrateRouters,
+  ProductCategoryRouters,
+  ProductRouters,
+  ProductVariantRouters,
+  TransactionRouters,
+} = require('./routers')
 
 app.use('/users', AuthRouters)
 app.use('/migrate', MigrateRouters)
 app.use('/product-category', ProductCategoryRouters)
+app.use('/product', ProductRouters)
+app.use('/product-variant', ProductVariantRouters)
+app.use("/transaction", TransactionRouters)
 
 
 app.listen(port, () => {
