@@ -14,13 +14,13 @@ use your own database setup
 
     const db=mysql.createPool({
 
-    host:<localhost>,
+        host:<localhost>,
     
-    user:<database_user>,
+        user:<database_user>,
     
-    password:<databse_password>,
+        password:<databse_password>,
     
-    database:<database_name>,
+        database:<database_name>,
     
     })
 
