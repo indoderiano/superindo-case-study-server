@@ -2,6 +2,8 @@
 
 GUIDE STEP BY STEP
 
+
+
 ===============================================================
 **SETUP**
 
@@ -34,7 +36,9 @@ in your browser or postman request get with these url
 
 
 http://localhost:4000/migrate/create-table-user
+
 http://localhost:4000/migrate/create-table-product-categories
+
 http://localhost:4000/migrate/create-table-products
 http://localhost:4000/migrate/create-table-product-variants
 http://localhost:4000/migrate/create-table-transactions
