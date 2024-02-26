@@ -12,7 +12,7 @@ in ./connection/mysqldb.ts
 
 use your own database setup
 
-const db=mysql.createPool({
+    const db=mysql.createPool({
 
     host:<localhost>,
     
@@ -22,7 +22,7 @@ const db=mysql.createPool({
     
     database:<database_name>,
     
-})
+    })
 
 ===========================================================================
 
