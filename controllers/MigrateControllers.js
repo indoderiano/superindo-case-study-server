@@ -21,9 +21,9 @@ module.exports={
           let private_key = "superindo";
           // let password = jwt.sign("dianawayne", private_key);
           
-          let username = 'diana';
+          let username = 'bruce';
           let email = 'batman@gmail.com';
-          let role = 'customer';
+          let role = 'administrator';
           let password = encrypt('iambatman');
           
 
@@ -42,30 +42,6 @@ module.exports={
               return res.status(200).send(rows);
             }
           })
-        }
-      })
-    },
-    createTableJokes: (req, res) => {
-      // let query_create_table_jokes = "CREATE TABLE jokes (a INT NOT NULL AUTO_INCREMENT PRIMARY KEY, joke TEXT NOT NULL);LOAD DATA INFILE '/jokes.txt' INTO TABLE jokes FIELDS TERMINATED BY '' LINES TERMINATED BY '\n%%\n';";
-
-
-      // let query_create_table_jokes = "CREATE TABLE jokes (a INT NOT NULL AUTO_INCREMENT PRIMARY KEY, joke TEXT NOT NULL);";
-      let query_create_table_jokes = "LOAD DATA INFILE '/jokes.txt' INTO TABLE jokes;";
-
-      // let query_create_table_jokes = "CREATE TABLE jokes (a INT NOT NULL AUTO_INCREMENT PRIMARY KEY, joke TEXT NOT NULL);LOAD DATA INFILE '/jokes.txt' INTO TABLE jokes;";
-
-
-
-
-      db.execute(query_create_table_jokes, (error, rows) => {
-        if (error) {
-          console.log(error);
-          return res.status(500).send(error);
-        } else {
-          console.log("create table succeed");
-          console.log(rows);
-
-          return res.status(200).send(rows);
         }
       })
     },
@@ -153,7 +129,7 @@ module.exports={
           console.log(error);
           return res.status(500).send(error);
         } else {
-          console.log("create table succeed");
+          console.log("create table product variant succeed");
           console.log(rows);
 
           let query_insert_table_product_variant = "INSERT INTO product_variants ( product_id, code, name, qty, price, active, created_user, updated_user ) VALUES ( 1, 'PDCT00010001', 'Indomie Goreng Original', 100, 3000, true, 'diana', 'diana' ), ( 1, 'PDCT00010002', 'Indomie Ayam Bawang', 100, 2700, true, 'diana', 'diana' ), ( 1, 'PDCT00010003', 'Indomie Goreng Aceh', 100, 3000, true, 'diana', 'diana' ), ( 1, 'PDCT00010004', 'Indomie Goreng Original', 100, 3000, true, 'diana', 'diana' ), ( 2, 'PDCT00020001', 'Sandwich Ayam', 100, 15000, true, 'diana', 'diana' ), ( 2, 'PDCT00020002', 'Sandwich Tuna', 100, 15000, true, 'diana', 'diana' ), ( 3, 'PDCT00030001', 'Jus Alpukat', 100, 10000, true, 'diana', 'diana' ), ( 3, 'PDCT00030002', 'Jus Jeruk', 100, 10000, true, 'diana', 'diana' );";

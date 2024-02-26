@@ -5,7 +5,6 @@ const router=express.Router()
 
 
 router.get('/create-table-user', MigrateControllers.createTableUser)
-router.get('/create-table-jokes', MigrateControllers.createTableJokes)
 router.get('/create-table-product-categories', MigrateControllers.createTableProductCategories)
 router.get('/create-table-products', MigrateControllers.createTableProduct)
 router.get('/create-table-product-variants', MigrateControllers.createTableProductVariant)

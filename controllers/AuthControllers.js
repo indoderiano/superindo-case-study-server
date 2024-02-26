@@ -5,46 +5,25 @@ const jwt=require('jsonwebtoken')
 
 
 module.exports={
-    // register: (req, res) => {
-    //   const { username, email, password, role } = req.body;
+    register: (req, res) => {
 
-    // }
-    // login: (req, res) => {
-    //   const query = 'SELECT username'
-    //   pool.query
-    // }
-    test: (req, res) => {
-      let query = 'SELECT * FROM users;';
+      let { username, email, password } = req.body;
+      
+      let role = 'customer';
+      password = encrypt(password);
 
-      // db.execute(query, [])
-      // .then(([rows, fields]) => {
-      //   console.log(rows);
-      //   return res.status(200).send({rows})
-      // })
-      // .catch((error) => {
-      //   console.log(error);
-      //   return res.status(500).send(error);
-      // });
+      let query_insert_user = "INSERT INTO `superindo_case_study`.`users` (`username`, `email`, `role`, `password`) VALUES (?, ?, ?, ?);";
 
-      db.execute(query, (error, rows) => {
+      db.execute(query_insert_user, [username, email, role, password], (error, rows) => {
         if (error) {
-          console.error(error);
+          console.log(error);
           return res.status(500).send(error);
         } else {
+          console.log("insert user succeed");
           console.log(rows);
           return res.status(200).send(rows);
         }
       })
-
-      // db.query(query, (error, results, fields) => {
-      //   if (error) {
-      //     console.error(error);
-      //     return res.status(500).send(error);
-      //   } else {
-      //     console.log(results);
-      //     return res.status(200).send(results);
-      //   }
-      // })
     },
     login: (req, res) => {
       console.log("request login");
