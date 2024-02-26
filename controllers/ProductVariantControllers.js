@@ -1,13 +1,9 @@
 const { db }=require('../connections')
-// const encrypt=require('../helper/crypto')
-// const jwt=require('jsonwebtoken')
-// const nodemailer=require('nodemailer')
 
 
 module.exports={
     getProductVariantsByProductId: (req, res) => {
 
-      // console.log("req query is ", req.params);
       let { productId } = req.params;
       let query = 'SELECT * FROM product_variants WHERE product_id=?;';
 

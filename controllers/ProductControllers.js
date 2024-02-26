@@ -1,7 +1,4 @@
 const { db }=require('../connections')
-// const encrypt=require('../helper/crypto')
-// const jwt=require('jsonwebtoken')
-// const nodemailer=require('nodemailer')
 
 
 module.exports={
@@ -22,9 +19,7 @@ module.exports={
       let { category_id } = req.params;
       console.log("category id ", category_id);
       let query;
-      // let query=category_id?'SELECT * FROM product_variants INNER JOIN products ON product_variants.product_id=products.id WHERE products.product_category_id=?;':'SELECT * FROM product_variants INNER JOIN products ON product_variants.product_id=products.id;';
 
-      // console.log(query);
 
       if ( category_id != "null" ) {
         console.log('category exist');

@@ -1,7 +1,6 @@
 const { db }=require('../connections')
 const encrypt=require('../helper/crypto')
 const jwt=require('jsonwebtoken')
-// const nodemailer=require('nodemailer')
 
 
 module.exports={
@@ -26,12 +25,9 @@ module.exports={
       })
     },
     login: (req, res) => {
-      console.log("request login");
       console.log(req.body)
 
       let { username, password } = req.body;
-
-      // let pass = "eyJhbGciOiJIUzI1NiJ9.YnJ1Y2V3YXluZQ.H5gqnDSh2DVBXw52eH493G1H_dXBChpGPMGVXQslXBk";
 
       let query_check_user = `select * from users where username = ? and password = ?`;
       
@@ -40,8 +36,6 @@ module.exports={
           console.log(error);
           return res.status(500).send(error);
         } else {
-          // console.log("");
-          console.log(rows);
 
           if ( rows.length == 0 ) {
             let error_description = "user not found";

@@ -1,7 +1,4 @@
 const { db }=require('../connections')
-// const encrypt=require('../helper/crypto')
-// const jwt=require('jsonwebtoken')
-// const nodemailer=require('nodemailer')
 
 
 module.exports={
