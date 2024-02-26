@@ -30,8 +30,8 @@ use your own database setup
 
 in your console
 
-npm install
-node .
+    npm install
+    node .
 
 ===========================================================================
 
@@ -57,7 +57,8 @@ http://localhost:4000/migrate/create-table-transaction-details
 
 
 
-make sure each url is executed successfully
+check your database and make sure each url is executed successfully
+
 
 
 ===========================================================================
