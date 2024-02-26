@@ -8,7 +8,7 @@ GUIDE STEP BY STEP
 
 **SETUP**
 
-in ./connection
+in ./connection/mysqldb.ts
 
 use your own database setup
 
