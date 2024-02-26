@@ -17,6 +17,45 @@ module.exports={
       })
     },
 
+    getCartTransaction: (req, res) => {
+
+      let { username, role } = req.decoded;
+
+      let query = 'SELECT td.*, pv.name as product_variant_name, t.total_amount FROM transaction_details td INNER JOIN transactions t ON td.transaction_id=t.id INNER JOIN product_variants pv ON td.product_variant_id=pv.id WHERE t.active=true AND t.created_user=?;';
+
+      // let query = 'SELECT * FROM transactions;';
+
+      db.execute(query, [username], (error, rows) => {
+        if (error) {
+          console.error(error);
+          return res.status(500).send(error);
+        } else {
+          console.log(rows);
+          return res.status(200).send(rows);
+        }
+      })
+    },
+
+    checkout: (req, res) => {
+      let { transactionId } = req.params;
+
+      // UPDATE table_name
+      // SET column1 = value1, column2 = value2, ...
+      // WHERE condition;
+
+      let query = 'UPDATE transactions SET active = false WHERE id=?;'
+
+      db.execute(query, [transactionId], (error, rows) => {
+        if (error) {
+          console.error(error);
+          return res.status(500).send(error);
+        } else {
+          console.log(rows);
+          return res.status(200).send(rows);
+        }
+      })
+    },
+
     createTransaction: (req, res) => {
 
       console.log(req.body);
