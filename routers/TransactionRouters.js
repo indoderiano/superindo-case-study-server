@@ -6,7 +6,7 @@ const { checkRole, checkAdmin, checkCustomer } = require('../middleware/auth')
 const router=express.Router()
 
 
-router.get('/data', TransactionControllers.getAllTransactions)
+router.get('/data', checkAdmin, TransactionControllers.getAllTransactions)
 router.post('/create', checkCustomer, TransactionControllers.createTransaction)
 // router.get('/users', AuthControllers.test)
 

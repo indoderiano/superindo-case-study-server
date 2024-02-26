@@ -24,6 +24,7 @@ const {
   ProductRouters,
   ProductVariantRouters,
   TransactionRouters,
+  TransactionDetailRouters,
 } = require('./routers')
 
 app.use('/users', AuthRouters)
@@ -31,7 +32,8 @@ app.use('/migrate', MigrateRouters)
 app.use('/product-category', ProductCategoryRouters)
 app.use('/product', ProductRouters)
 app.use('/product-variant', ProductVariantRouters)
-app.use("/transaction", TransactionRouters)
+app.use('/transaction', TransactionRouters)
+app.use('/transaction-detail', TransactionDetailRouters)
 
 
 app.listen(port, () => {

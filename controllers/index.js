@@ -4,6 +4,7 @@ const ProductCategoryControllers = require('./ProductCategoryControllers')
 const ProductControllers = require('./ProductControllers')
 const ProductVariantControllers = require('./ProductVariantControllers')
 const TransactionControllers = require('./TransactionControllers')
+const TransactionDetailControllers = require("./TransactionDetailControllers")
 
 module.exports = {
   AuthControllers,
@@ -12,4 +13,5 @@ module.exports = {
   ProductControllers,
   ProductVariantControllers,
   TransactionControllers,
+  TransactionDetailControllers,
 }

@@ -5,6 +5,7 @@ const ProductCategoryRouters = require('./ProductCategoryRouters')
 const ProductRouters = require('./ProductRouters')
 const ProductVariantRouters = require('./ProductVariantRouters')
 const TransactionRouters = require('./TransactionRouters')
+const TransactionDetailRouters = require('./TransactionDetailRouters')
 
 module.exports = {
   AuthRouters,
@@ -13,4 +14,5 @@ module.exports = {
   ProductRouters,
   ProductVariantRouters,
   TransactionRouters,
+  TransactionDetailRouters,
 }
