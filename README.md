@@ -1,12 +1,12 @@
 
 
-GUIDE STEP BY STEP
+# Guide step by step
 
 
 
 ===========================================================================
 
-**SETUP**
+## SETUP
 
 in ./connection/mysqldb.ts
 
@@ -21,7 +21,7 @@ const db=mysql.createPool({
 
 ===========================================================================
 
-**RUN THE SERVER**
+## RUN THE SERVER
 
 in your console
 
@@ -30,7 +30,7 @@ node .
 
 ===========================================================================
 
-**MIGRATION**
+## MIGRATION
 
 the server has its own routes for creating table and inserting data, so by trigerring these urls will migrate data into your database.
 
@@ -58,7 +58,7 @@ make sure each url is executed successfully
 ===========================================================================
 
 
-**Finish**
+## Finish
 
 the server is ready
 
