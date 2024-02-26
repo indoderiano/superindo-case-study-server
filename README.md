@@ -13,10 +13,15 @@ in ./connection/mysqldb.ts
 use your own database setup
 
 const db=mysql.createPool({
+
     host:<localhost>,
+    
     user:<database_user>,
+    
     password:<databse_password>,
+    
     database:<database_name>,
+    
 })
 
 ===========================================================================
